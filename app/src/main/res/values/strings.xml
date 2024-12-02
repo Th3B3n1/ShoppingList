@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ShoppingList</string>
+    <string name="hint_product_name">Product Name</string>
+    <string name="hint_product_amount">Product Amount</string>
+    <string name="button_add_item">Add item</string>
+    <string name="button_back">Back</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,40 +8,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:labelFor="@id/productName"/>
     <EditText
+        android:id="@+id/productNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:inputType="text"
-        android:text="Product Name"
-        android:id="@+id/productName"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:labelFor="@id/productAmount"/>
+        android:hint="@string/hint_product_name"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"/>
+
     <EditText
+        android:id="@+id/productAmountInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:inputType="number"
-        android:text="Product Amount"
-        android:id="@+id/productAmount"/>
+        android:hint="@string/hint_product_amount"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"/>
+
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/addItemButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add item"/>
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </ListView>
+        android:text="@string/button_add_item"/>
 
+    <ListView
+        android:id="@+id/listNode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
